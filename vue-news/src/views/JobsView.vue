@@ -1,6 +1,6 @@
 <template>
   <div>
-      jobs
+      잡스
   </div>
 </template>
 
