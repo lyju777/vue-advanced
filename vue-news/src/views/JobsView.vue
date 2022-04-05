@@ -9,11 +9,13 @@ import {fetchJobsList} from '../api/index.js';
 
 export default {
 
+
     data(){
     return{
       jobs: []
     }
   },
+
 
 created() {
   fetchJobsList()
