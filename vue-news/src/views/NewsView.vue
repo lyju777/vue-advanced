@@ -16,13 +16,15 @@ export default {
     }
   },
   created() {
-    var vm = this;
+    console.log("호출 전:",this);
     fetchNewsList()
-    .then(function(response){
-        console.log(response);
-        vm.users = response.data;
+    .then(response => {
+        console.log("호출 후:",this);
+      this.users = response.data
     })
-    .catch()
+    .catch(error => {
+      console.log(error);
+    })
   }
 }
 </script>
