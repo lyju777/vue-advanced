@@ -1,6 +1,11 @@
 <template>
   <div>
-      <div v-for="(item,i) in fetchedAsk" :key="i">{{item.title}}</div>
+      <p v-for="(item,i) in fetchedAsk" :key="i">
+        <a :href="item.url">
+          {{item.title}}
+          </a>
+          <small>{{item.time_ago}} by {{item.user}}</small>
+        </p>
   </div>
 </template>
 
