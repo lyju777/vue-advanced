@@ -18,7 +18,7 @@
       </div>
     </section>
     <section>
-      <!-- 질문 댓글 -->
+      <!-- 질문 댓글, -->
       <div v-html="fetchedItem.content"></div>
     </section>
     <!-- {{ this.$store.state.item}} -->
