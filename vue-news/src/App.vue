@@ -22,6 +22,17 @@ body {
   padding: 0;
   margin: 0;
 }
+a{
+  text-decoration: none;
+  color: #35495e;
+}
+a.router-link-exact-active{
+  text-decoration: underline;
+}
+a:hover{
+  color: #42b883;
+  text-decoration: underline;
+}
 
 
 /* we will explain what these classes do next! */

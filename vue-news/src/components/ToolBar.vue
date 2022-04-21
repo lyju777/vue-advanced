@@ -24,6 +24,6 @@ export default {
         color: #35495e;
     }
     .header a {
-        color: whitew;
+        color: white;
     }
 </style>
