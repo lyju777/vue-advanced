@@ -1,40 +1,17 @@
 <template>
   <div>
-               <ul class="news-list">
-      <li v-for="(job, i) in this.$store.state.jobs" :key="i" class="post">
-        <!-- 포인트 영역 -->
-        <div class="points">
-          {{ job.points || 0 }}
-        </div>
-        <!-- 기타 정보 영역 -->
-        <div>
-          <p class="news-title">
-            <a :href="job.url">{{job.title}}</a>
-          </p> 
-          <small class="link-text">
-            {{job.time_ago}} by
-            <!-- <router-link class="link-text" :to="`/user/${job.user}`">
-            {{job.domain}}</router-link> -->
-            <a :href="job.url">
-              {{job.domain}}
-            </a>
-          </small>
-        </div>
-      </li>
-    </ul>
+    <list-item></list-item>
   </div>
 </template>
 
 <script>
-
+import ListItem from '@/components/ListItem.vue';
 export default {
-
-
-created() {
-  this.$store.dispatch('FETCH_JOBS')
-}
-
-}
+  components: { ListItem },
+  created() {
+    this.$store.dispatch("FETCH_JOBS");
+  },
+};
 </script>
 
 <style scoped>
@@ -57,11 +34,11 @@ created() {
   justify-content: center;
   color: #42b833;
 }
-.news-title{
+.news-title {
   margin: 0px;
 }
 
-.link-text{
+.link-text {
   color: #828282;
 }
 </style>
