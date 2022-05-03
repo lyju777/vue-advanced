@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <!-- 질문 상세 정보 -->
+      <!-- 질문 상세 정보... -->
       <div class="user-container">
         user <br />
         <div>
