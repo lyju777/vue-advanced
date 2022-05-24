@@ -23,10 +23,14 @@
           </p>
           <small class="link-text">
             {{ item.time_ago }} by
-            <router-link v-if="item.user" class="link-text" :to="`/user/${item.user}`">
+            <router-link
+              v-if="item.user"
+              class="link-text"
+              :to="`/user/${item.user}`"
+            >
               {{ item.user }}
             </router-link>
-            <a :href="item.url" v-else>  {{ item.domain }}</a>
+            <a :href="item.url" v-else> {{ item.domain }}</a>
           </small>
         </div>
       </li>
@@ -36,7 +40,6 @@
 
 <script>
 export default {
-
   computed: {
     // eslint-disable-next-line vue/return-in-computed-property
     ListItems() {
